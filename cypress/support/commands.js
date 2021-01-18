@@ -12,92 +12,61 @@
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
 
-Cypress.Commands.add('typeLogin', (user) => {
-    cy.get('.sc-fzpjYC')
-      .type(user.phoneNo)
+Cypress.Commands.add('loginAdmin', (user) => {
+    cy.get('[name="username"]')
+      .type(user.username)
+      
 
-    cy.get('.sc-AxjAm').click()
-
-      cy.get('#1')
-      .type(user.pin1)
-  
-      cy.get('#2')
-      .type(user.pin2)
-  
-      cy.get('#3')
-      .type(user.pin3)
-  
-      cy.get('#4')
-      .type(user.pin4)
-  
-      cy.get('#5')
-      .type(user.pin5)
-  
-      cy.get('#6')
-      .type(user.pin6)
-  
-      cy.get('.sc-AxjAm').click()
+   cy.get('[style="position: relative; width: 100%;"] > .input')
+   .type(user.password)
+ 
+      cy.get('.button').click()
       
   })
   
-  Cypress.Commands.add('postgresql', (user) => {
-
-  cy.postgresql(`Select data ->> 'pinCode' AS pinCode FROM public.users where data->>'msisdn'='+2348090909089`).should('eq', 'test');
+ 
 
 
-  
+  Cypress.Commands.add('loginMerchant', (merchantUser) => {
+    cy.get('[name="username"]')
+      .type(merchantUser.merchUsername)
+      
+
+   cy.get('[style="position: relative; width: 100%;"] > .input')
+   .type(merchantUser.merchPassword)
+ 
+      cy.get('.button').click()
+      
   })
 
-  Cypress.Commands.add('generateToken', (user) => {
-  
-    cy.request('POST' ,'https://api-dev.spaceso2o.com/api/token/generate-token', {
-
-      "password": "112233",
-      "username": "admin"
-    
-    }).then(function(response)
-    
-    {
-    expect(response.status).to.eq(200)
-    
-    const authtoken = (response.body.token)
-    
-    cy.log(authtoken)
-    
-  
-
-    }) 
 
 
-    Cypress.Commands.add('searchUser', (user) => {
-  
-      cy.request('GET' ,'https://api-dev.spaceso2o.com/api/users/27201a5e-ee1b-41d3-afa0-8845e50026ad', {
-  
-        headers: {
 
-          "fingerprint":  "e0224b3d-74f5-49c5-930f-61d7079c7b3b"
-          
-        }
+
+  Cypress.Commands.add('typeLogin', (vehicleMgruser) => {
+    cy.get('[name="username"]')
+      .type(vehicleMgruser.vehicleMgrUsername)
       
-      }).then(function(response)
+
+   cy.get('[style="position: relative; width: 100%;"] > .input')
+   .type(vehicleMgruser.vehicleMgrPassword)
+ 
+      cy.get('.button').click()
       
-      {
-      expect(response.status).to.eq(200)
-      
-      
-      
-    }) 
-
-
-
-  
-      }) 
-
-
-
-
-
   })
+
+  
+
+
+
+  
+    
+
+
+
+
+
+  
 //
 //
 // -- This is a child command --

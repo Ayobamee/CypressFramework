@@ -2,120 +2,228 @@ class LandingPage
 {
     
 
-getSpacesLogo()
+getOnscreenSuccess()
 
 {
 
-    return  cy.get('[src="/static/media/spaces_logo.508602f0.svg"]')
+    return  cy.get('.Toastify__toast')
 }
 
-getImageForAgent()
+
+getDashboard()
 
 {
 
-    return  cy.get('.sc-pbYdQ')
+    return cy.get(':nth-child(1) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
+
 }
 
 
-
-getImageProfile()
+getShipments()
 
 {
 
-    return  cy.get('.sc-oVpqz')
+    return cy.get(':nth-child(2) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
 }
 
 
-getSaleIcon()
+
+getPartners()
 
 {
 
-    return  cy.get(':nth-child(2) > .sc-qPzgd > :nth-child(2)')
+    return cy.get(':nth-child(3) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
 }
 
 
-getShopIcon()
+getInventory()
 
 {
 
-    return  cy.get(':nth-child(2) > .sc-qPzgd > :nth-child(1)')
+    return cy.get(':nth-child(4) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
 }
 
 
-getAgentIcon()
+getSettings()
+{
+    return cy.get(':nth-child(4) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
+}
+
+
+getBookings()
+{
+    return cy.get(' :nth-child(4) > .sc-eNQAEJ > .sc-hMqMXs > a > .sc-kkGfuU')
+}
+
+getProfile()
+
+{
+    return cy.get('.sc-iujRgT')
+}
+
+
+getFufilment()
+{
+    return cy.get(':nth-child(5) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
+}
+
+
+getwareHousing()
+{
+
+    return cy.get('.sc-iAyFgw > .sc-iwsKbI')
+}
+
+
+getDriverss()
+{
+    return cy.get(':nth-child(2) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
+}
+
+
+getVehicles() 
+{
+
+    return cy.get(':nth-child(3) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
+}
+
+getAddDriver()
+{
+
+    return cy.get('.sc-bdVaJa')
+}
+
+getDriverName()
+{
+    return cy.get('[name="name"]')
+}
+
+getDriverPhoneNo()
+{
+    return cy.get('[name="telephone"]')
+}
+
+getDriverEmail() 
+{
+    return cy.get('[name="email"]')
+}
+
+getDriverLicense()
+{
+    return cy.get('[name="licenseNumber"]')
+
+}
+
+getSaveDriver() 
+{
+    return cy.get('.form > .sc-iwsKbI > .kCRkdH')
+}
+
+
+getSuccessfulAlertDriver()
+{
+    return cy.get('[style=""] > .Toastify__toast-body')
+
+}
+
+getCreateVehicle () {
+    return cy.get('.sc-bdVaJa')
+}
+
+getAddVehicle () {
+    return cy.get('[style="margin-bottom: 20px;"] > .sc-ifAKCX')
+}
+
+
+getVehicleRegNo () 
+{
+    return cy.get('[name="registrationNumber"]')
+}
+
+
+getVehicleType() 
 
 {
 
-    return  cy.get(':nth-child(1) > .sc-qPzgd > :nth-child(3)')
+    return cy.get('.styled-select').select('Bicycle')
+    .should('have.value', 'bicycle')
+    
 }
 
+getVehicleModel() 
+{
+    return cy.get('.exKwLu > .input')
+}
 
-getMerchantIcon()
+getVehicleMake() 
+{
+    return cy.get('.kxogMg > .input')
+}
 
+getAddVehicleButton () 
 {
 
-    return  cy.get(':nth-child(1) > .sc-qPzgd > :nth-child(2)')
+    return cy.get('.hmNHGa > .kCRkdH')
 }
 
-getShop() 
+
+getSuccessfulVehicle()
 {
-    return cy.get('[href="/actions/shop"] > .sc-pQrUA')
+    return cy.get('[style=""] > .Toastify__toast-body')
+
 }
 
-getMore() 
+
+getDrivers()
 {
-    return cy.get(':nth-child(4) > .sc-qZtVr')
+    return cy.get(':nth-child(3) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
 }
 
- getSettings()
- {
-     return cy.get('.sc-fznAgC > .sc-AxheI')
- }
 
-getPersonalDetails() 
+
+getPricingSheets()
 {
-    return cy.get('[href="/user/update_data"] > .sc-pQEbo > .sc-pHIBf')
+    return cy.get(':nth-child(5) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
 }
- 
 
-getName() 
+getDeliveryZones()
 {
-    return cy.get(':nth-child(1) > .sc-fzoiQi')
+    return cy.get(':nth-child(6) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
 }
 
-getLastName()
-{
-    return cy.get(':nth-child(2) > .sc-fzoiQi')
-}
+ keyGen(keyLength) {
+    var i, key = "", characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-getAddress() 
-{
-    return cy.get(':nth-child(5) > .sc-fzoiQi')
-}
+    var charactersLength = characters.length;
 
-getSave() {
-    return cy.get('.sc-AxjAm')
-}
+    for (i = 0; i < keyLength; i++) {
+        key += characters.substr(Math.floor((Math.random() * charactersLength) + 1), 1);
+    }
 
-getSuccessfulKYC()
-{
-    return cy.get('.Toastify__toast-body')
+    return key;
 }
 
 
-getNotification()
-{
-    return cy.get('.sc-pRhbc')
-}
+randomChar(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+       result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  }
 
 
-getViewNotification() {
-    return cy.get(':nth-child(1) > .sc-prQdK')
-}
+  random(len) {
+    let result = Math.floor(Math.random() * Math.pow(10, len));
+    return (result.toString().length < len) ? random(len) : result;
+  }
 
-getReferalNotification() {
-    return cy.get(':nth-child(2) > .sc-prQdK')
-}
+
+  
+
+
 
 }
 

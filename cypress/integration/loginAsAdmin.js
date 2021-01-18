@@ -17,31 +17,32 @@ describe('Warenext Regression TestSuite', function()
   })
 
 
-it('Validate that a Merchant with correct Credentials can log into the platform', function() {
+it('Validate that an Admin with correct Credentials can log into the platform', function() {
 
  const landingPage = new LandingPage()
 
+ //Open as an Iphone 6 view
+ //cy.viewport(320, 568)
 
-
-  //Open Spaces
+  //Open Warenext
   cy.visit(this.data.baseURL)  
-
-
   //Wait for 2 secs
   cy.wait(2000)
 
 
+  //Click Continue
+  //homePage.getOnboardButton().click({force :true})
   
    //Login to the application
-   cy.loginMerchant({merchUsername:this.data.merchantUsername, merchPassword:this.data.merchantPassword,
-  
+   cy.loginAdmin({username:this.data.adminUsername, password:this.data.adminPassword,
    })
 
-      
+  
    //Wait for 5 secs
    cy.wait(5000)
-  
-  //Validate that Merchant user is successfully logged into the app.
+
+
+  //Validate that Admin user is successfully logged into the app.
 
   //Check that the spaces logo displays on landing page.
   //landingPage.getOnscreenSuccess().should('be.visible')
@@ -52,21 +53,16 @@ it('Validate that a Merchant with correct Credentials can log into the platform'
  //Check that shipment is displayed
  landingPage.getShipments().should('be.visible')
 
- //Check that Inventory is displayed
- landingPage.getInventory().should('be.visible')
+ //Check that Partners is displayed
+ landingPage.getPartners().should('be.visible')
 
- //Check that Bookings is displayed
- //landingPage.getShipments().should('be.visible')
+ //Check that Settings is displayed
+ landingPage.getSettings().should('be.visible')
   
  //Check that Profile Image is displayed
  landingPage.getProfile().should('be.visible')
 
 
- //Check that ware housing element is displayed
- landingPage.getwareHousing().should('be.visible')
-
-
- landingPage.getFufilment().should('be.visible')
 
 })
 

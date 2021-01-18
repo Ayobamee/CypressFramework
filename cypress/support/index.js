@@ -27,5 +27,5 @@ import './commands'
 
 
 
-import postgreSQL from 'cypress-postgresql';
-postgreSQL.loadDBCommands();
+//import postgreSQL from 'cypress-postgresql';
+//postgreSQL.loadDBCommands();

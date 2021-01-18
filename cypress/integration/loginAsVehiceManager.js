@@ -17,7 +17,7 @@ describe('Warenext Regression TestSuite', function()
   })
 
 
-it('Validate that a Merchant with correct Credentials can log into the platform', function() {
+it('Validate login as a Vehicle Manager with correct Credentials', function() {
 
  const landingPage = new LandingPage()
 
@@ -33,15 +33,15 @@ it('Validate that a Merchant with correct Credentials can log into the platform'
 
   
    //Login to the application
-   cy.loginMerchant({merchUsername:this.data.merchantUsername, merchPassword:this.data.merchantPassword,
+   cy.typeLogin({vehicleMgrUsername:this.data.vehicleMgrUsername, vehicleMgrPassword:this.data.vehicleMgrPassword,
   
    })
 
-      
+     
    //Wait for 5 secs
    cy.wait(5000)
   
-  //Validate that Merchant user is successfully logged into the app.
+  //Validate that Admin user is successfully logged into the app.
 
   //Check that the spaces logo displays on landing page.
   //landingPage.getOnscreenSuccess().should('be.visible')
@@ -56,17 +56,27 @@ it('Validate that a Merchant with correct Credentials can log into the platform'
  landingPage.getInventory().should('be.visible')
 
  //Check that Bookings is displayed
- //landingPage.getShipments().should('be.visible')
+ //landingPage.getBookings().should('be.visible')
   
  //Check that Profile Image is displayed
  landingPage.getProfile().should('be.visible')
 
+ //Check that drivers info appears
+ landingPage.getDrivers().should('be.visible')
+
+
+//Check that pricing sheets info appears
+landingPage.getPricingSheets().should('be.visible')
+
+
+//Check that delivery zones info appears
+landingPage.getDeliveryZones().should('be.visible')
+
+
 
  //Check that ware housing element is displayed
- landingPage.getwareHousing().should('be.visible')
+ //landingPage.getwareHousing().should('be.visible')
 
-
- landingPage.getFufilment().should('be.visible')
 
 })
 

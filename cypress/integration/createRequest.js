@@ -39,6 +39,81 @@ it('Validate Merchant can create a shipment request', function() {
    //Click create request
    requestPage.getcreateRequest().click()
 
+    //Select pick up address
+    requestPage.getLocationFrom().type('ikeja')
+
+    //Wait for 4 secs
+    cy.wait(4000)
+
+    //Scroll down to particular locatiom
+    requestPage.getLocationFrom().type('{downarrow}')
+
+    //Wait for 1 sec
+    cy.wait(1000)
+    requestPage.getLocationFrom().type('{enter}')
+
+    //Select ikeja from drop down
+    requestPage.getSelectIkeja()
+
+
+    //Select destination address
+    requestPage.getDestination().type('ikeja')
+
+
+     //Wait for 4 secs
+     cy.wait(4000)
+
+     //Scroll down to particular locatiom
+     requestPage.getDestination().type('{downarrow}')
+
+     //Select ikeja from drop down
+    requestPage.getSelectIkeja()
+
+
+    //Enter Contact Name 
+   requestPage.getContactName().type(this.data.customerName)
+    
+
+    //Enter Phone No 
+    requestPage.getPhoneNo().type(this.data.customerPhoneNo)
+
+    // Tick check box for same delivery 
+   //requestPage.getTick().click()
+
+   //Enter Reciever Name 
+   requestPage.getRecieverName().type(this.data.createdCustName)
+
+    //Enter Reciever Phone No 
+    requestPage.getRecieverPhoneNo().type(this.data.receiverPhoneNo)
+
+   //Click Next
+   requestPage.getNext().click({force: true})
+    
+    //requestPage.getLocationFrom().type('{downarrow}').click()
+    
+
+    //cy.wait(2000)
+
+    //requestPage.getSelectIkeja()
+
+    /*
+    //Select destination
+   requestPage.getDestination().type(this.data.PickUpAddress)
+
+
+   //Enter Contact Name 
+   requestPage.getContactName().type(this.data.customerName)
+   
+   //Enter Phone No 
+   requestPage.getPhoneNo().type(this.data.customerPhoneNo)
+
+   // Tick check box for same delivery 
+   requestPage.getTick().click()
+
+    //Click Next
+    requestPage.getNext().click({force: true})
+    
+*/
    //requestPage.getSelectSpecArea().type('ikeja')
 
    //requestPage.getSelectIkeja()
@@ -46,30 +121,28 @@ it('Validate Merchant can create a shipment request', function() {
    //Select pick up area
    //requestPage.getPickUpArea()
 
-   //Select pick up address
-   requestPage.getLocationFrom().type(this.data.PickUpAddress)
+  
 
+   //cy.get('.autocomplete-dropdown-container > :nth-child(5)').click()
+   
+   
    //Select area
-   requestPage.getSelectArea()
+   //requestPage.getSelectArea()
 
    //Enter address 
-   requestPage.getAddress().type(this.data.Address)
+   //requestPage.getAddress().type(this.data.Address)
    
 
-   //Enter Contact Name 
-   requestPage.getContactName().type(this.data.customerName)
+   
 
-   //Enter Phone No 
-   requestPage.getPhoneNo().type(this.data.customerPhoneNo)
-
+/*
    //Enter Reciever Name 
    requestPage.getRecieverName().type(this.data.createdCustName)
 
    //Enter Reciever Phone No 
    requestPage.getRecieverPhoneNo().type(this.data.receiverPhoneNo)
 
-   //Click Next
-   requestPage.getNext().click({force: true})
+  
 
    //Choose vehicle Type
    requestPage.getVehicleType().click()

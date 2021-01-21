@@ -18,7 +18,7 @@ describe('Warenext Regression TestSuite', function()
   })
 
 
-it('Validate Merchant can create a shipment request', function() {
+it('Validate Merchant can create a shipment request successfully', function() {
 
  const requestPage = new RequestPage()
 

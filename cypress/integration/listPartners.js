@@ -19,7 +19,7 @@ this.data=data
 
 
 
-it('Load Shipment Test', function() {
+it('List Partners Test', function() {
 
 
 cy.request('GET' , this.data.apiBaseURL, {
@@ -45,7 +45,7 @@ const authtoken = (response.body.accessToken)
 cy.request({
     
   method: 'GET' ,
-  url: this.data.truckerURL, 
+  url: this.data.apiBase, 
 
 
 headers: {
@@ -59,24 +59,19 @@ headers: {
 body:{}
 
 
-}).then(function(shipmentLoad)
+}).then(function(logisticsPart)
 
-{
-   if(expect(shipmentLoad.status).to.eq(200) && expect(shipmentLoad).to.have.property('headers') 
-   && expect(shipmentLoad).to.have.property('body')) {
-   
-    cy.log("Shipments can be loaded.")
+{ 
 
-   }
+  if(expect(logisticsPart.status).to.eq(200) && expect(logisticsPart).to.have.property('headers')
+  &&expect(logisticsPart).to.have.property('body') ) {
 
-   else {
+    cy.log('Test passed, partners cannot be listed.')
+  }
+  else {
 
-    cy.log("Shipments cannot be loaded.")
-
-   }
-
-
-
+    cy.log('Oops, something went wrong :(')
+  }
 
 
 

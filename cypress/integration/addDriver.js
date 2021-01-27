@@ -64,9 +64,16 @@ it('Validate that a driver can be added to the platform', function() {
 
 //Validate that the driver is created successfully
 
-landingPage.getSuccessfulAlertDriver('be.visible')
- 
 
+if(landingPage.getSuccessfulAlertDriver('be.visible'))
+{
+  cy.log('Driver was created successfully')
+} 
+
+
+else {
+  cy.log('Oops, driver could not be created!')
+}
 
 
 })

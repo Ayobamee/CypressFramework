@@ -58,7 +58,7 @@ getBookings()
 getProfile()
 
 {
-    return cy.get('.sc-cQFLBn')
+    return cy.get('.sc-iujRgT')
 }
 
 

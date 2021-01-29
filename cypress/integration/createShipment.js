@@ -148,7 +148,9 @@ body:{
 
 { 
 
-  if(expect(createShipment.status).to.eq(200) && expect(createShipment).to.have.property('headers')
+  
+
+  if(expect(createShipment.body).to.have.property("jobId")&& expect(createShipment.status).to.eq(200) && expect(createShipment).to.have.property('headers')
   &&expect(createShipment).to.have.property('body') ) {
 
     cy.log('Test passed, shipments can be created.')

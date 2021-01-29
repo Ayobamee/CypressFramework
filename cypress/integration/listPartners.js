@@ -66,7 +66,7 @@ body:{}
   if(expect(logisticsPart.status).to.eq(200) && expect(logisticsPart).to.have.property('headers')
   &&expect(logisticsPart).to.have.property('body') ) {
 
-    cy.log('Test passed, partners cannot be listed.')
+    cy.log('Test passed, partners can be listed.')
   }
   else {
 

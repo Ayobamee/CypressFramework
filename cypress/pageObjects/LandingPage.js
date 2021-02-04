@@ -221,9 +221,65 @@ randomChar(length) {
   }
 
 
-  
+  getCreateAccount() {
+
+    return cy.get('.sc-hAcydR > a')
+  }
+
+getCustomer() {
+
+    return cy.contains('I am a customer')
+}
+
+getFirstName() {
+
+    return cy.get('.form > :nth-child(2) > :nth-child(1) > .input')
+}
+
+getLastName() {
+
+    return cy.get(':nth-child(2) > :nth-child(2) > .input')
+}
+
+getEmail() {
+
+    return cy.get(':nth-child(3) > :nth-child(1) > .input')
+}
+
+getPhoneNo() {
+
+    return cy.get(':nth-child(3) > :nth-child(2) > .input')
+}
+
+getPassword() {
+
+    return cy.get(':nth-child(1) > div > .input')
+}
 
 
+getRetypePassword() {
+
+    return cy.get(':nth-child(5) > :nth-child(2) > .input')
+}
+
+
+
+getHowYouHeard()
+{
+    return cy.get('[name="source"]').select('Google/Search')
+    .should('have.value', 'Google/Search')
+}
+
+
+getSignUp () {
+
+ return cy.get('.sc-emmjRN')
+}
+
+getSignUpAlert() {
+
+    return cy.get('.Toastify__toast-body')
+}
 
 }
 

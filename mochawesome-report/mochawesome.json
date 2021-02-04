@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-02-02T08:03:04.669Z",
+    "end": "2021-02-02T08:03:29.474Z",
+    "duration": 24805,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b2e903a0-82a5-4bb5-b783-1f8a12341f5d",
+      "title": "",
+      "fullFile": "cypress/integration/loginAsVehiceManager.js",
+      "file": "cypress/integration/loginAsVehiceManager.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "084cf86e-6d50-487a-b712-20839011f981",
+          "title": "Warenext Regression TestSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate login as a Vehicle Manager with correct Credentials",
+              "fullTitle": "Warenext Regression TestSuite Validate login as a Vehicle Manager with correct Credentials",
+              "timedOut": null,
+              "duration": 23222,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var landingPage = new _LandingPage[\"default\"](); //Open warenext url\n//cy.visit(this.data.baseURL)  \ncy.visit(Cypress.env(\"stagingUrl\")); //Wait for 2 secs\ncy.wait(2000); //Login to the application\ncy.typeLogin({\n  vehicleMgrUsername: this.data.vehicleMgrUsername,\n  vehicleMgrPassword: this.data.vehicleMgrPassword\n}); //Wait for 5 secs\ncy.wait(5000); //Validate that Admin user is successfully logged into the app.\n//Check that the spaces logo displays on landing page.\n//landingPage.getOnscreenSuccess().should('be.visible')\n//Check that Dashboard is displayed\nlandingPage.getDashboard().should('be.visible'); //Check that shipment is displayed\nlandingPage.getShipments().should('be.visible'); //Check that Inventory is displayed\nlandingPage.getInventory().should('be.visible'); //Check that Bookings is displayed\n//landingPage.getBookings().should('be.visible')\n//Check that Profile Image is displayed\nlandingPage.getProfile().should('be.visible'); //Check that drivers info appears\nlandingPage.getDrivers().should('be.visible'); //Check that pricing sheets info appears\nlandingPage.getPricingSheets().should('be.visible'); //Check that delivery zones info appears\nlandingPage.getDeliveryZones().should('be.visible'); //Check that ware housing element is displayed\n//landingPage.getwareHousing().should('be.visible')",
+              "err": {},
+              "uuid": "8fa0909e-3643-4ec9-a123-854571bec7d1",
+              "parentUUID": "084cf86e-6d50-487a-b712-20839011f981",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8fa0909e-3643-4ec9-a123-854571bec7d1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 23222,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}

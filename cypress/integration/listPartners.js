@@ -22,7 +22,7 @@ this.data=data
 it('List Partners Test', function() {
 
 
-cy.request('GET' , this.data.apiBaseURL, {
+cy.request('GET' , this.data.stagingBaseURL+this.data.authStaging, {
 
 
 "password": this.data.adminPassword,
@@ -45,7 +45,7 @@ const authtoken = (response.body.accessToken)
 cy.request({
     
   method: 'GET' ,
-  url: this.data.apiBase, 
+  url: this.data.stagingBaseURL+this.data.logisticsPartners, 
 
 
 headers: {

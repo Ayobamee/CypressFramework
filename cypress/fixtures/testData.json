@@ -3,7 +3,14 @@
   "apiBaseURL": "https://api-dev.warenext.ng/auth/login",
   "truckerURL" : "https://api-dev.warenext.ng/admin/truckerjob",
   "apiBase" : "https://api-dev.warenext.ng/logisticPartners",
-  "createShipmentBaseURL": "https://api-dev.warenext.ng//v1/truckerJob",
+  "createShipmentBaseURL": "https://api-dev.warenext.ng/v1/truckerJob",
+
+  "stagingBaseURL" : "https://api-staging.warenext.ng",
+  "authStaging": "/auth/login",
+  "shipmentPricing": "/getShipmentPricing",
+  "createShipment": "/v1/truckerJob",
+  "logisticsPartners" : "/logisticPartners",
+  "truckerJobs" : "/admin/truckerjob",
   "adminUsername": "demo@admin.com",
   "adminPassword": "test1234",
   "merchantUsername":"merchant@test.com",
@@ -31,7 +38,8 @@
   "costPrice": "2000",
   "quantityInstock": "1",
   "productDescription": "AutomatedTesting",
-  "retailPrice": "3000"
+  "retailPrice": "3000",
+  "password": "Test12345!"
 
 
 

@@ -17,7 +17,7 @@ describe('Warenext Regression TestSuite', function()
   })
 
 
-it('Validate that an Admin with correct Credentials can log into the platform', function() {
+it('Validate that a Merchant can sign up to the platform', function() {
 
  const landingPage = new LandingPage()
 
@@ -33,22 +33,46 @@ it('Validate that an Admin with correct Credentials can log into the platform', 
   cy.wait(2000)
 
 
-  //Click Continue
-  //homePage.getOnboardButton().click({force :true})
+  //Click create account
+  landingPage.getCreateAccount().click()
+ 
+
+ //Click customer
+ landingPage.getCustomer().click()
+
+ //Wait for 6 secs
+cy.wait(6000)
+
+ //Enter first Name
+ landingPage.getFirstName().type(landingPage.randomChar(8))
+
+ //Enter last Name
+ landingPage.getLastName().type(landingPage.randomChar(6))
+
+ //Enter email address
+ landingPage.getEmail().type(landingPage.random(5)+'@yahoo.com')
+
+ //Enter Phone Number
+ landingPage.getPhoneNo().type('+234809019'+landingPage.random(4))
+
+ //Enter Password
+ landingPage.getPassword().type(this.data.password)
   
-   //Login to the application
-   cy.loginAdmin({username:this.data.adminUsername, password:this.data.adminPassword,
-   })
+  //Retype Password
+  landingPage.getRetypePassword().type(this.data.password)
 
-  
-   //Wait for 5 secs
-   cy.wait(5000)
+//Select refered medium
+landingPage.getHowYouHeard()
 
 
-  //Validate that Admin user is successfully logged into the app.
+  //Click signup
+  landingPage.getSignUp().click()
 
-  //Check that the spaces logo displays on landing page.
-  //landingPage.getOnscreenSuccess().should('be.visible')
+ //Validate signup is successsful
+ landingPage.getSignUpAlert().should('be.visible')
+
+
+ /*
 
  //Check that Dashboard is displayed
  landingPage.getDashboard().should('be.visible')
@@ -64,7 +88,7 @@ it('Validate that an Admin with correct Credentials can log into the platform', 
   
  //Check that Profile Image is displayed
  landingPage.getProfile().should('be.visible')
-
+*/
 
 
 })

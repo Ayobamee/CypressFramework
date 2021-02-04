@@ -22,10 +22,10 @@ this.data=data
 it('Create Shipment Test', function() {
 
 
-cy.request('GET' , this.data.apiBaseURL, {
+cy.request('GET' , this.data.stagingBaseURL+this.data.authStaging, {
 
 
-"password": this.data.adminPassword,
+"password": this.data.merchantPassword,
 "email": this.data.merchantUsername
   
 
@@ -45,7 +45,7 @@ const authtoken = (response.body.accessToken)
 cy.request({
     
   method: 'PUT' ,
-  url: this.data.createShipmentBaseURL, 
+  url: this.data.stagingBaseURL+this.data.createShipment, 
 
 
 headers: {

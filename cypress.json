@@ -1,6 +1,13 @@
 {
     "chromeWebSecurity": false,
-    "projectId": "4auyde",
+    "projectId": "pv5yoq",
+    "reporter": "mochawesome",
+
+    "env" : {
+     
+        "stagingUrl" :"https://app-staging.warenext.ng/login"
+     
+    },
 
     "db": {
         "user": "postgres",

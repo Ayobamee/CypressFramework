@@ -21,9 +21,9 @@ it('Validate that a vehicle can be added to the platform', function() {
 
  const landingPage = new LandingPage()
 
-
-  //Open Spaces
-  cy.visit(this.data.baseURL)  
+//Open warenext url
+  
+  cy.visit(Cypress.env("stagingUrl"))
 
 
   //Wait for 2 secs

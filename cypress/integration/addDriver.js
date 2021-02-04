@@ -22,9 +22,10 @@ it('Validate that a driver can be added to the platform', function() {
  const landingPage = new LandingPage()
 
 
-  //Open Spaces
-  cy.visit(this.data.baseURL)  
+  //Open warenext url
+  //cy.visit(this.data.baseURL)  
 
+  cy.visit(Cypress.env("stagingUrl"))
 
   //Wait for 2 secs
   cy.wait(2000)

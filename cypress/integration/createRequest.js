@@ -22,8 +22,10 @@ it('Validate Merchant can create a shipment request successfully', function() {
 
  const requestPage = new RequestPage()
 
-  //Open Spaces
-  cy.visit(this.data.baseURL)  
+  //Open warenext url
+  //cy.visit(this.data.baseURL)  
+
+  cy.visit(Cypress.env("stagingUrl"))
 
 
   //Wait for 2 secs

@@ -23,8 +23,10 @@ it('Validate login as a Vehicle Manager with correct Credentials', function() {
 
 
 
-  //Open Spaces
-  cy.visit(this.data.baseURL)  
+ //Open warenext url
+  //cy.visit(this.data.baseURL)  
+
+  cy.visit(Cypress.env("stagingUrl"))
 
 
   //Wait for 2 secs

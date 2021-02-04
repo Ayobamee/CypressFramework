@@ -23,8 +23,10 @@ it('Validate that a Merchant with correct Credentials can log into the platform'
 
 
 
-  //Open Spaces
-  cy.visit(this.data.baseURL)  
+ //Open warenext url
+  //cy.visit(this.data.baseURL)  
+
+  cy.visit(Cypress.env("stagingUrl"))
 
 
   //Wait for 2 secs

@@ -37,8 +37,8 @@ it('Validate that a Merchant can sign up to the platform', function() {
   landingPage.getCreateAccount().click()
  
 
- //Click customer
- landingPage.getCustomer().click()
+ //Click Partner
+ landingPage.getPartner().click()
 
  //Wait for 6 secs
 cy.wait(6000)

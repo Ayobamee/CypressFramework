@@ -90,7 +90,7 @@ getVehicles()
 getAddDriver()
 {
 
-    return cy.get('.sc-bdVaJa')
+    return cy.get('.kCRkdH')
 }
 
 getDriverName()
@@ -127,7 +127,7 @@ getSuccessfulAlertDriver()
 }
 
 getCreateVehicle () {
-    return cy.get('.sc-bdVaJa')
+    return cy.get('.kCRkdH')
 }
 
 getAddVehicle () {
@@ -223,13 +223,20 @@ randomChar(length) {
 
   getCreateAccount() {
 
-    return cy.get('.sc-hAcydR > a')
+    return cy.get('.sc-gcJTYu > a')
   }
 
 getCustomer() {
 
     return cy.contains('I am a customer')
 }
+
+
+getPartner() {
+
+    return cy.contains('I am a partner')
+}
+
 
 getFirstName() {
 

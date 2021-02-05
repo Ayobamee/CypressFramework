@@ -58,6 +58,9 @@ it('Validate Merchant can create a shipment request successfully', function() {
     requestPage.getSelectIkeja()
 
 
+    //Landmark
+    requestPage.getLandmark().type('ikeja')
+
     //Select destination address
     requestPage.getDestination().type('ikeja')
 
@@ -70,7 +73,7 @@ it('Validate Merchant can create a shipment request successfully', function() {
 
      //Select ikeja from drop down
     requestPage.getSelectIkeja()
-
+/*
 
     //Enter Contact Name 
    requestPage.getContactName().type(this.data.customerName)
@@ -88,6 +91,7 @@ it('Validate Merchant can create a shipment request successfully', function() {
     //Enter Reciever Phone No 
     requestPage.getRecieverPhoneNo().type(this.data.receiverPhoneNo)
 
+    */
    //Click Next
    requestPage.getNext().click({force: true})
     

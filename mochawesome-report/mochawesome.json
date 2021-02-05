@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2021-02-02T08:03:04.669Z",
-    "end": "2021-02-02T08:03:29.474Z",
-    "duration": 24805,
+    "start": "2021-02-04T18:28:59.543Z",
+    "end": "2021-02-04T18:29:21.496Z",
+    "duration": 21953,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "b2e903a0-82a5-4bb5-b783-1f8a12341f5d",
+      "uuid": "8c385a6c-a766-4249-a05d-9377a9daf5ed",
       "title": "",
-      "fullFile": "cypress/integration/loginAsVehiceManager.js",
-      "file": "cypress/integration/loginAsVehiceManager.js",
+      "fullFile": "cypress/integration/signUpAsMerchant.js",
+      "file": "cypress/integration/signUpAsMerchant.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "084cf86e-6d50-487a-b712-20839011f981",
+          "uuid": "3c570289-d954-4bbc-9102-61306f9e658c",
           "title": "Warenext Regression TestSuite",
           "fullFile": "",
           "file": "",
@@ -35,32 +35,32 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "Validate login as a Vehicle Manager with correct Credentials",
-              "fullTitle": "Warenext Regression TestSuite Validate login as a Vehicle Manager with correct Credentials",
+              "title": "Validate that a Merchant can sign up to the platform",
+              "fullTitle": "Warenext Regression TestSuite Validate that a Merchant can sign up to the platform",
               "timedOut": null,
-              "duration": 23222,
+              "duration": 19662,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "var landingPage = new _LandingPage[\"default\"](); //Open warenext url\n//cy.visit(this.data.baseURL)  \ncy.visit(Cypress.env(\"stagingUrl\")); //Wait for 2 secs\ncy.wait(2000); //Login to the application\ncy.typeLogin({\n  vehicleMgrUsername: this.data.vehicleMgrUsername,\n  vehicleMgrPassword: this.data.vehicleMgrPassword\n}); //Wait for 5 secs\ncy.wait(5000); //Validate that Admin user is successfully logged into the app.\n//Check that the spaces logo displays on landing page.\n//landingPage.getOnscreenSuccess().should('be.visible')\n//Check that Dashboard is displayed\nlandingPage.getDashboard().should('be.visible'); //Check that shipment is displayed\nlandingPage.getShipments().should('be.visible'); //Check that Inventory is displayed\nlandingPage.getInventory().should('be.visible'); //Check that Bookings is displayed\n//landingPage.getBookings().should('be.visible')\n//Check that Profile Image is displayed\nlandingPage.getProfile().should('be.visible'); //Check that drivers info appears\nlandingPage.getDrivers().should('be.visible'); //Check that pricing sheets info appears\nlandingPage.getPricingSheets().should('be.visible'); //Check that delivery zones info appears\nlandingPage.getDeliveryZones().should('be.visible'); //Check that ware housing element is displayed\n//landingPage.getwareHousing().should('be.visible')",
+              "code": "var landingPage = new _LandingPage[\"default\"](); //Open as an Iphone 6 view\n//cy.viewport(320, 568)\n//Open warenext url\n//cy.visit(this.data.baseURL)  \ncy.visit(Cypress.env(\"stagingUrl\")); //Wait for 2 secs\ncy.wait(2000); //Click create account\nlandingPage.getCreateAccount().click(); //Click customer\nlandingPage.getCustomer().click(); //Wait for 6 secs\ncy.wait(6000); //Enter first Name\nlandingPage.getFirstName().type(landingPage.randomChar(8)); //Enter last Name\nlandingPage.getLastName().type(landingPage.randomChar(6)); //Enter email address\nlandingPage.getEmail().type(landingPage.random(5) + '@yahoo.com'); //Enter Phone Number\nlandingPage.getPhoneNo().type('+234809019' + landingPage.random(4)); //Enter Password\nlandingPage.getPassword().type(this.data.password); //Retype Password\nlandingPage.getRetypePassword().type(this.data.password); //Select refered medium\nlandingPage.getHowYouHeard(); //Click signup\nlandingPage.getSignUp().click(); //Validate signup is successsful\nlandingPage.getSignUpAlert().should('be.visible');\n/*\n //Check that Dashboard is displayed\nlandingPage.getDashboard().should('be.visible')\n //Check that shipment is displayed\nlandingPage.getShipments().should('be.visible')\n //Check that Partners is displayed\nlandingPage.getPartners().should('be.visible')\n //Check that Settings is displayed\nlandingPage.getSettings().should('be.visible')\n \n//Check that Profile Image is displayed\nlandingPage.getProfile().should('be.visible')\n*/",
               "err": {},
-              "uuid": "8fa0909e-3643-4ec9-a123-854571bec7d1",
-              "parentUUID": "084cf86e-6d50-487a-b712-20839011f981",
+              "uuid": "391e9a03-386f-4a87-a730-c5c7d8821aa0",
+              "parentUUID": "3c570289-d954-4bbc-9102-61306f9e658c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "8fa0909e-3643-4ec9-a123-854571bec7d1"
+            "391e9a03-386f-4a87-a730-c5c7d8821aa0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 23222,
+          "duration": 19662,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -50,7 +50,7 @@ it('Validate that a driver can be added to the platform', function() {
    landingPage.getDriverName().type(landingPage.randomChar(10))
 
    //Add driver phoneNo
-   landingPage.getDriverPhoneNo().type('+234809019'+landingPage.keyGen(4))
+   landingPage.getDriverPhoneNo().type('809019'+landingPage.random(4))
 
    //Add driver email
    landingPage.getDriverEmail().type(landingPage.random(7)+'@yahoo.com')

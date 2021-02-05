@@ -37,6 +37,7 @@ expect(response.status).to.eq(200)
 
 const authtoken = (response.body.accessToken)
 
+
 //cy.log(authtoken)
 
 
@@ -149,6 +150,9 @@ body:{
 { 
 
   
+
+
+
 
   if(expect(createShipment.body).to.have.property("jobId")&& expect(createShipment.status).to.eq(200) && expect(createShipment).to.have.property('headers')
   &&expect(createShipment).to.have.property('body') ) {

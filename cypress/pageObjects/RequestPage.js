@@ -18,7 +18,7 @@ getSelectSpecArea()
 
 getSelectIkeja()
 {
-    return cy.get(':nth-child(8) > .kxogMg > .input').select('Ikeja')
+    return cy.get('.kxogMg > .input').select('Ikeja')
     .should('have.value', 'Ikeja')
 }
 
@@ -44,7 +44,7 @@ getPickUpArea()
 getLocationFrom() 
 {
 
-    return cy.get(':nth-child(7) > .sc-eMRERa > .location-search-input')
+    return cy.get(':nth-child(7) > .sc-jotlie > .location-search-input')
 }
 
 
@@ -52,7 +52,7 @@ getLocationFrom()
 getDestination() 
 {
 
-    return cy.get(':nth-child(11) > .sc-eMRERa > .location-search-input')
+    return cy.get(':nth-child(12) > .sc-jotlie > .location-search-input')
 }
 
 
@@ -120,6 +120,11 @@ getTick()
     return cy.get('.sc-fjdhpX')
 }
 
+
+getLandmark()
+{
+    return cy.get(':nth-child(10) > .input')
+}
 
 
 }

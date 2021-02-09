@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2021-02-09T14:58:34.679Z",
-    "end": "2021-02-09T14:58:55.714Z",
-    "duration": 21035,
+    "failures": 1,
+    "start": "2021-02-09T15:11:49.200Z",
+    "end": "2021-02-09T15:12:00.341Z",
+    "duration": 11141,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "4b1e5da6-4cbc-450f-989b-747f4c6bc22f",
+      "uuid": "20f9f2e4-c983-4bfb-95f3-1a1bdbb35798",
       "title": "",
-      "fullFile": "cypress/integration/loginAsAdmin.js",
-      "file": "cypress/integration/loginAsAdmin.js",
+      "fullFile": "cypress/integration/signUpAsMerchant.js",
+      "file": "cypress/integration/signUpAsMerchant.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "5ddaf24d-4666-41b2-9bc4-88bed5921af4",
+          "uuid": "8b0249a6-05cc-46c2-b995-f84d217d9008",
           "title": "Warenext Regression TestSuite",
           "fullFile": "",
           "file": "",
@@ -35,32 +35,36 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "Validate that an Admin with correct Credentials can log into the platform",
-              "fullTitle": "Warenext Regression TestSuite Validate that an Admin with correct Credentials can log into the platform",
+              "title": "Validate that a Merchant can sign up to the platform",
+              "fullTitle": "Warenext Regression TestSuite Validate that a Merchant can sign up to the platform",
               "timedOut": null,
-              "duration": 19527,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 9782,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "var landingPage = new _LandingPage[\"default\"](); //Open as an Iphone 6 view\n//cy.viewport(320, 568)\n//Open warenext url\n//cy.visit(this.data.baseURL)  \ncy.visit(Cypress.env(\"stagingUrl\")); //Wait for 2 secs\ncy.wait(2000); //Click Continue\n//homePage.getOnboardButton().click({force :true})\n//Login to the application\ncy.loginAdmin({\n  username: this.data.adminUsername,\n  password: this.data.adminPassword\n}); //Wait for 5 secs\ncy.wait(5000); //Validate that Admin user is successfully logged into the app.\n//Check that the spaces logo displays on landing page.\n//landingPage.getOnscreenSuccess().should('be.visible')\n//Check that Dashboard is displayed\nlandingPage.getDashboard().should('be.visible'); //Check that shipment is displayed\nlandingPage.getShipments().should('be.visible'); //Check that Partners is displayed\nlandingPage.getPartners().should('be.visible'); //Check that Settings is displayed\nlandingPage.getSettings().should('be.visible'); //Check that Profile Image is displayed\nlandingPage.getProfile().should('be.visible');",
-              "err": {},
-              "uuid": "b3279481-c1ed-41ab-a3ec-a5802f9f20b5",
-              "parentUUID": "5ddaf24d-4666-41b2-9bc4-88bed5921af4",
+              "code": "var landingPage = new _LandingPage[\"default\"](); //Open as an Iphone 6 view\n//cy.viewport(320, 568)\n//Open warenext url\n//cy.visit(this.data.baseURL)  \ncy.visit(Cypress.env(\"stagingUrl\")); //Wait for 2 secs\ncy.wait(2000); //Click create account\nlandingPage.getCreateAccount().click(); //Click customer\nlandingPage.getCustomer().click(); //Wait for 6 secs\ncy.wait(6000); //Enter first Name\nlandingPage.getFirstName().type(landingPage.randomChar(8)); //Enter last Name\nlandingPage.getLastName().type(landingPage.randomChar(6)); //Enter email address\nlandingPage.getEmail().type(landingPage.random(5) + '@yahoo.com'); //Enter Phone Number\nlandingPage.getPhoneNo().type('+234809019' + landingPage.random(4)); //Enter Password\nlandingPage.getPassword().type(this.data.password); //Retype Password\nlandingPage.getRetypePassword().type(this.data.password); //Select refered medium\nlandingPage.getHowYouHeard(); //Click signup\nlandingPage.getSignUp().click(); //Validate signup is successsful\nlandingPage.getSignUpAlert().should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.sc-gcJTYu > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.sc-gcJTYu > a`, but never found it.\n    at LandingPage.getCreateAccount (https://app-staging.warenext.ng/__cypress/tests?p=cypress/integration/signUpAsMerchant.js:432:17)\n    at Context.eval (https://app-staging.warenext.ng/__cypress/tests?p=cypress/integration/signUpAsMerchant.js:182:17)",
+                "diff": null
+              },
+              "uuid": "5694bd52-5d43-4113-b243-397c994d89e8",
+              "parentUUID": "8b0249a6-05cc-46c2-b995-f84d217d9008",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "b3279481-c1ed-41ab-a3ec-a5802f9f20b5"
+          "passes": [],
+          "failures": [
+            "5694bd52-5d43-4113-b243-397c994d89e8"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 19527,
+          "duration": 9782,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

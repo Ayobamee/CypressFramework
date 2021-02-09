@@ -223,7 +223,7 @@ randomChar(length) {
 
   getCreateAccount() {
 
-    return cy.get('.sc-gcJTYu > a')
+    return cy.get('.sc-iBfVdv > a')
   }
 
 getCustomer() {

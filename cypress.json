@@ -5,7 +5,10 @@
 
     "env" : {
      
-        "stagingUrl" :"https://app-staging.warenext.ng/login"
+        "stagingUrl" :"https://app-staging.warenext.ng/login" ,
+        "devURL": "https://app-staging.warenext.ng/login",
+
+        "prodURL": "https://app.warenext.ng/login"
      
     },
 

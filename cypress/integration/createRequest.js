@@ -41,6 +41,10 @@ it('Validate Merchant can create a shipment request successfully', function() {
    //Click create request
    requestPage.getcreateRequest().click()
 
+
+     //Wait for 2 secs
+  cy.wait(2000)
+
     //Select pick up address
     requestPage.getLocationFrom().type('ikeja')
 

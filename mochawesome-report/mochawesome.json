@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2021-02-04T18:28:59.543Z",
-    "end": "2021-02-04T18:29:21.496Z",
-    "duration": 21953,
+    "start": "2021-02-09T14:58:34.679Z",
+    "end": "2021-02-09T14:58:55.714Z",
+    "duration": 21035,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "8c385a6c-a766-4249-a05d-9377a9daf5ed",
+      "uuid": "4b1e5da6-4cbc-450f-989b-747f4c6bc22f",
       "title": "",
-      "fullFile": "cypress/integration/signUpAsMerchant.js",
-      "file": "cypress/integration/signUpAsMerchant.js",
+      "fullFile": "cypress/integration/loginAsAdmin.js",
+      "file": "cypress/integration/loginAsAdmin.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "3c570289-d954-4bbc-9102-61306f9e658c",
+          "uuid": "5ddaf24d-4666-41b2-9bc4-88bed5921af4",
           "title": "Warenext Regression TestSuite",
           "fullFile": "",
           "file": "",
@@ -35,32 +35,32 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "Validate that a Merchant can sign up to the platform",
-              "fullTitle": "Warenext Regression TestSuite Validate that a Merchant can sign up to the platform",
+              "title": "Validate that an Admin with correct Credentials can log into the platform",
+              "fullTitle": "Warenext Regression TestSuite Validate that an Admin with correct Credentials can log into the platform",
               "timedOut": null,
-              "duration": 19662,
+              "duration": 19527,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "var landingPage = new _LandingPage[\"default\"](); //Open as an Iphone 6 view\n//cy.viewport(320, 568)\n//Open warenext url\n//cy.visit(this.data.baseURL)  \ncy.visit(Cypress.env(\"stagingUrl\")); //Wait for 2 secs\ncy.wait(2000); //Click create account\nlandingPage.getCreateAccount().click(); //Click customer\nlandingPage.getCustomer().click(); //Wait for 6 secs\ncy.wait(6000); //Enter first Name\nlandingPage.getFirstName().type(landingPage.randomChar(8)); //Enter last Name\nlandingPage.getLastName().type(landingPage.randomChar(6)); //Enter email address\nlandingPage.getEmail().type(landingPage.random(5) + '@yahoo.com'); //Enter Phone Number\nlandingPage.getPhoneNo().type('+234809019' + landingPage.random(4)); //Enter Password\nlandingPage.getPassword().type(this.data.password); //Retype Password\nlandingPage.getRetypePassword().type(this.data.password); //Select refered medium\nlandingPage.getHowYouHeard(); //Click signup\nlandingPage.getSignUp().click(); //Validate signup is successsful\nlandingPage.getSignUpAlert().should('be.visible');\n/*\n //Check that Dashboard is displayed\nlandingPage.getDashboard().should('be.visible')\n //Check that shipment is displayed\nlandingPage.getShipments().should('be.visible')\n //Check that Partners is displayed\nlandingPage.getPartners().should('be.visible')\n //Check that Settings is displayed\nlandingPage.getSettings().should('be.visible')\n \n//Check that Profile Image is displayed\nlandingPage.getProfile().should('be.visible')\n*/",
+              "code": "var landingPage = new _LandingPage[\"default\"](); //Open as an Iphone 6 view\n//cy.viewport(320, 568)\n//Open warenext url\n//cy.visit(this.data.baseURL)  \ncy.visit(Cypress.env(\"stagingUrl\")); //Wait for 2 secs\ncy.wait(2000); //Click Continue\n//homePage.getOnboardButton().click({force :true})\n//Login to the application\ncy.loginAdmin({\n  username: this.data.adminUsername,\n  password: this.data.adminPassword\n}); //Wait for 5 secs\ncy.wait(5000); //Validate that Admin user is successfully logged into the app.\n//Check that the spaces logo displays on landing page.\n//landingPage.getOnscreenSuccess().should('be.visible')\n//Check that Dashboard is displayed\nlandingPage.getDashboard().should('be.visible'); //Check that shipment is displayed\nlandingPage.getShipments().should('be.visible'); //Check that Partners is displayed\nlandingPage.getPartners().should('be.visible'); //Check that Settings is displayed\nlandingPage.getSettings().should('be.visible'); //Check that Profile Image is displayed\nlandingPage.getProfile().should('be.visible');",
               "err": {},
-              "uuid": "391e9a03-386f-4a87-a730-c5c7d8821aa0",
-              "parentUUID": "3c570289-d954-4bbc-9102-61306f9e658c",
+              "uuid": "b3279481-c1ed-41ab-a3ec-a5802f9f20b5",
+              "parentUUID": "5ddaf24d-4666-41b2-9bc4-88bed5921af4",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "391e9a03-386f-4a87-a730-c5c7d8821aa0"
+            "b3279481-c1ed-41ab-a3ec-a5802f9f20b5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 19662,
+          "duration": 19527,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

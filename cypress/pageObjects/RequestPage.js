@@ -44,7 +44,7 @@ getPickUpArea()
 getLocationFrom() 
 {
 
-    return cy.get(':nth-child(7) > .sc-jotlie > .location-search-input')
+    return cy.get(':nth-child(7) > .sc-fdQOMr > .location-search-input')
 }
 
 
@@ -52,7 +52,7 @@ getLocationFrom()
 getDestination() 
 {
 
-    return cy.get(':nth-child(12) > .sc-jotlie > .location-search-input')
+    return cy.get(':nth-child(12) > .sc-fdQOMr > .location-search-input')
 }
 
 

@@ -16,6 +16,30 @@ getSelectSpecArea()
 }
 
 
+getPickUpTime ()
+{
+    return cy.get('.kxogMg > .react-datepicker-wrapper > .react-datepicker__input-container > .input')
+}
+
+getSpecificTime ()
+{
+    return cy.get(':nth-child(48)')
+}
+
+
+getCalendar()
+{
+
+    return cy.get('.exKwLu > .react-datepicker-wrapper > .react-datepicker__input-container > .input')
+}
+
+getDay()
+{
+    return cy.get('.react-datepicker__day--027')
+}
+
+
+
 getSelectIkeja()
 {
     return cy.get('.kxogMg > .input').select('Ikeja')

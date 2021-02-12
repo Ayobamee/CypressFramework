@@ -20,7 +20,7 @@ Cypress.Commands.add('loginAdmin', (user) => {
    cy.get('[style="position: relative; width: 100%;"] > .input')
    .type(user.password)
  
-      cy.get('.button').click()
+      cy.get('.sc-emmjRN').click()
       
   })
   

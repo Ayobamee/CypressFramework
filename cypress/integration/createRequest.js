@@ -45,6 +45,24 @@ it('Validate Merchant can create a shipment request successfully', function() {
      //Wait for 2 secs
   cy.wait(2000)
 
+
+  requestPage.getCalendar().click()
+
+   requestPage.getDay().click()
+
+   requestPage.getPickUpTime().click()
+
+   requestPage.getSpecificTime().click()
+
+    //requestPage.getPickUpTime().type('{downarrow}')
+
+    //requestPage.getPickUpTime().type('{enter}')
+
+   
+
+      //Wait for 2 secs
+  cy.wait(2000)
+
     //Select pick up address
     requestPage.getLocationFrom().type('ikeja')
 
@@ -98,6 +116,11 @@ it('Validate Merchant can create a shipment request successfully', function() {
     */
    //Click Next
    requestPage.getNext().click({force: true})
+
+
+   //requestPage.getMonthAndDate()
+
+   
     
 
 })

@@ -20,8 +20,6 @@ this.data=data
 
 
 it('Create Shipment for Gokada Test', function() {
-
-
 cy.request('GET' , this.data.stagingBaseURL+this.data.authStaging, {
 
 
@@ -36,10 +34,6 @@ expect(response.status).to.eq(200)
 
 
 const authtoken = (response.body.accessToken)
-
-
-//cy.log(authtoken)
-
 
 
 //Confirm user can create shipment
@@ -182,7 +176,18 @@ const jobId = (createShipment.body.jobId)
   
   {
 
-    if(expect(checkjob.status).to.eq(200) && expect(checkjob.body).to.have.property("jobId")){
+
+ 
+
+  
+    if(expect(checkjob.status).to.eq(200) && expect(checkjob.body).to.have.property("jobId")
+
+    
+    )
+    
+    
+    
+    {
 
       cy.log("Job Id is displaying for Gokada delivery partner")
 

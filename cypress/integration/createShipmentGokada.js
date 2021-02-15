@@ -19,7 +19,7 @@ this.data=data
 
 
 
-it('Create Shipment for Gokada Test', function() {
+it('Create Shipment for Gokada Test(s)', function() {
 cy.request('GET' , this.data.stagingBaseURL+this.data.authStaging, {
 
 

@@ -77,14 +77,14 @@ getwareHousing()
 
 getDriverss()
 {
-    return cy.get(':nth-child(2) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
+    return cy.get(':nth-child(3) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
 }
 
 
 getVehicles() 
 {
 
-    return cy.get(':nth-child(3) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
+    return cy.get(':nth-child(4) > .sc-hMqMXs > .sc-kEYyzF > a > .sc-iAyFgw')
 }
 
 getAddDriver()
@@ -232,9 +232,15 @@ getCustomer() {
 }
 
 
+getWarenextPartner() {
+
+    return cy.get(':nth-child(3) > a > .sc-dhVevo > .sc-hAcydR > .sc-gzVnrw')
+}
+
+
 getPartner() {
 
-    return cy.contains('I am a partner')
+    return cy.contains('I am a Delivery Partner')
 }
 
 

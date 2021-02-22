@@ -68,6 +68,10 @@ landingPage.getHowYouHeard()
   //Click signup
   landingPage.getSignUp().click()
 
+
+//Wait for 2 secs
+cy.wait(2000)
+
  //Validate signup is successsful
  landingPage.getSignUpAlert().should('be.visible')
 

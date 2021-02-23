@@ -17,7 +17,7 @@ describe('Warenext Regression TestSuite', function()
   })
 
 
-it('Validate that a Merchant can sign up to the platform', function() {
+it('Validate that a logistics partner can sign up to the platform', function() {
 
  const landingPage = new LandingPage()
 

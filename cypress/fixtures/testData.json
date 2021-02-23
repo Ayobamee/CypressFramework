@@ -13,6 +13,7 @@
   "logisticsPartners" : "/logisticPartners",
   "truckerJobs" : "/admin/truckerjob",
   "uploadJob" : "/admin/upload/jobs",
+  "partnerLIst": "/warehouses?limit=1000",
   "adminUsername": "demo@admin.com",
   "adminPassword": "test1234",
   "merchant2Username": "demo@merchant.com",

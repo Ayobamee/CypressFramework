@@ -64,7 +64,8 @@ body:{}
 { 
 
   if(expect(wareHousePartner.status).to.eq(200) && expect(wareHousePartner).to.have.property('headers')
-  &&expect(wareHousePartner).to.have.property('body')) {
+  &&expect(wareHousePartner).to.have.property('body')
+ ) {
 
     cy.log('Test passed, partners can be listed for warehouse admin.')
   }

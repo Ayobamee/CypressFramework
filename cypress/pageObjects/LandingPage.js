@@ -223,7 +223,7 @@ randomChar(length) {
 
   getCreateAccount() {
 
-    return cy.get('.sc-iBfVdv > a')
+    return cy.get('.sc-eklfrZ > a')
   }
 
 getCustomer() {
@@ -234,7 +234,7 @@ getCustomer() {
 
 getWarenextPartner() {
 
-    return cy.get(':nth-child(3) > a > .sc-dhVevo > .sc-hAcydR > .sc-gzVnrw')
+    return cy.get(':nth-child(3) > a > .sc-BOulX > .sc-gcJTYu > .sc-gzVnrw')
 }
 
 

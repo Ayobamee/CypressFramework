@@ -116,7 +116,7 @@ body:{
   if(expect(listprice.status).to.eq(200) && expect(listprice).to.have.property('headers')
   &&expect(listprice).to.have.property('body') ) {
 
-    cy.log('Test passed, shipments can be created.')
+    cy.log('Test passed, pricing can be listed.')
   }
   else {
 

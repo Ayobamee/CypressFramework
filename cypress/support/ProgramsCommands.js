@@ -12,50 +12,16 @@
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
 
-Cypress.Commands.add('loginAdmin', (user) => {
-    cy.get('[name="username"]')
-      .type(user.username)
-      
+import ProgramPage from "../pageObjects/ProgramPage";
 
-   cy.get('[style="position: relative; width: 100%;"] > .input')
-   .type(user.password)
- 
-      cy.get('.sc-emmjRN').click()
-      
-  })
-  
- 
+  Cypress.Commands.add('Programs', (user) => {
 
+    const Page = new ProgramPage();
+    //Get programs from program page objects
+    Page.getPrograms().click()
 
-  Cypress.Commands.add('loginMerchant', (merchantUser) => {
-    cy.get('[name="username"]')
-      .type(merchantUser.merchUsername)
-      
-
-   cy.get('[style="position: relative; width: 100%;"] > .input')
-   .type(merchantUser.merchPassword)
- 
-      cy.get('.button').click()
       
   })
-
-
-
-
-
-  Cypress.Commands.add('typeLogin', (vehicleMgruser) => {
-    cy.get('[name="username"]')
-      .type(vehicleMgruser.vehicleMgrUsername)
-      
-
-   cy.get('[style="position: relative; width: 100%;"] > .input')
-   .type(vehicleMgruser.vehicleMgrPassword)
- 
-      cy.get('.button').click()
-      
-  })
-
-  
 
 
 

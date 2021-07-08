@@ -1,21 +1,20 @@
 {
-    "chromeWebSecurity": false,
-    "projectId": "pv5yoq",
-    "reporter": "mochawesome",
+  "chromeWebSecurity": false,
+  "projectId": "pv5yoq",
+  "reporter": "cypress-testrail-reporter",
+  "reporterOptions": {
+    "host": "https://1wa.testrail.com",
+    "username": "aelutade@1wa.org",
+    "password": "dUF4uXL1Uy5CUBsnT/xj-jnp3an662MzcpsjOZGkz",
+    "runName": "CypressTestRailTest",
+    "projectId": 2,
+    "includeAllInTestRun": false,
+    "suiteId": 1,
+    "createTestRun": true,
+    "testCases":[1016,1015]
+  },
 
-    "env" : {
-     
-        "stagingUrl" :"https://app-staging.warenext.ng/login" ,
-        "devURL": "https://app-staging.warenext.ng/login",
-
-        "prodURL": "https://app.warenext.ng/login"
-     
-    },
-
-    "db": {
-        "user": "postgres",
-        "password": "EilwgMomHdXbJm8EwzVN",
-        "host": "dbc:postgresql://spaces-staging-instance-1.cr835kymrvut.eu-central-1.rds.amazonaws.com",
-        "database": "/spaces"
-    }
+  "env": {
+    "prodUrl": "https://1wa.org/#/"
+  }
 }

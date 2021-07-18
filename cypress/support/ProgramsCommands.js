@@ -23,16 +23,6 @@ import ProgramPage from "../pageObjects/ProgramPage";
       
   })
 
-
-
-  
-    
-
-
-
-
-
-  
 //
 //
 // -- This is a child command --

@@ -11,7 +11,7 @@
     "includeAllInTestRun": false,
     "suiteId": 1,
     "createTestRun": true,
-    "testCases":[1015,1017,1018,1019,1020,1021,1022,1024,1025,1032]
+    "testCases":[1015,1016,1017,1018,1019,1020,1021,1022,1024,1025,1026,1032]
   },
 
   "env": {

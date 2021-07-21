@@ -128,6 +128,13 @@ Cypress.Commands.add('AssertFooterPage', () => {
 
 })
 
+Cypress.Commands.add('AssertVersion', () => {
+  //Assert Version
+  homePage.getVersion().should("be.visible")
+
+})
+
+
 
 //
 //

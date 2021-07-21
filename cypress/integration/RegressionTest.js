@@ -37,6 +37,13 @@ describe("Corporate Website Regression Test suite", function () {
     cy.AssertUrlLink({});
    });
 
+   it('Validate that the correct website version is displayed ' +websiteVersionTestCase, function () {
+    //Open 1wa url
+    openBrowserAndWait();
+    //Assert that the website link shows.
+    cy.AssertVersion({});
+   });
+
 
    it('Validate that Logo page populates ' +logoTestCase, function () {
    

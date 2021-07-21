@@ -9,6 +9,11 @@ getHome()
     return cy.get('#MENU_HOME > [href="#/"]')
 }
 
+getVersion()
+{
+    return cy.get('.version')
+}
+
 getTeam()
 
 {

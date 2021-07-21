@@ -12,16 +12,20 @@
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
 
+const baseUrl = "https://1wa.org/#/";
+
 import ProgramPage from "../pageObjects/ProgramPage";
-
+const Page = new ProgramPage();
   Cypress.Commands.add('Programs', (user) => {
-
-    const Page = new ProgramPage();
     //Get programs from program page objects
     Page.getPrograms().click()
 
       
   })
+
+
+
+
 
 //
 //

@@ -112,6 +112,35 @@ getBanner()
     return cy.get('.slide-hero-covid')
 }
 
+getInstagramLogo()
+{
+    return cy.get('[href="https://www.instagram.com/oneworldaccuracy"] > .fab')
+}
+getLinkedinLogo()
+{
+    return cy.get('[href="https://www.linkedin.com/company/oneworld-accuracy"] > .fab')
+}
+
+getYoutubeLogo()
+{
+    return cy.get('[href="https://www.youtube.com/channel/UCgIEX3y7Fyxoa6WNqWayc0A/"] > .fab')
+}
+
+getNewsletter()
+{
+    return cy.get('[href="https://oneworldaccuracy.zendesk.com/hc/en-us/categories/200115895-1WA-Newsletter-Bulletin"] > .fas')
+}
+
+getSupportEmail()
+{
+    return cy.get('.link-email')
+}
+
+
+getCopyright()
+{
+    return cy.get('.note > div')
+}
 
 }
 

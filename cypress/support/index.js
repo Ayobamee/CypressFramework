@@ -16,6 +16,7 @@
 // Import commands.js using ES2015 syntax:
 import './BaseUrlCommands'
 import './ProgramsCommands'
+import './AssertionsCommands'
 
 
 

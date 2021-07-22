@@ -16,11 +16,11 @@ describe("Corporate Website Regression Test suite", function () {
   const footerTestCase = "C1026";
   const viewMoreProgramTestCase = "C2218";
   const learnMore = "C2252";
+  const microbix = "C2253";
+
 
   
   
-
-
   function openBrowserAndWait() {
     cy.OpenUrl({});
     cy.wait(5000);
@@ -119,13 +119,6 @@ describe("Corporate Website Regression Test suite", function () {
   });
 
 
-  it('Validate that items in the Footer page populates ' +footerTestCase, function () {
-    //Open 1wa url.
-    openBrowserAndWait();
-     //Assert that the Footer Page
-     cy.AssertFooterPage({});
-  });
-
   it('Validate that when user clicks the learn more button, learn more page items displays ' +learnMore, function () {
     //Open 1wa url.
     openBrowserAndWait();
@@ -134,6 +127,24 @@ describe("Corporate Website Regression Test suite", function () {
      //Assert learn more page items.
      cy.AssertLearnMorePageItems({})
   });
+
+  it('Validate that when user clicks the microbix button, microbix page items displays ' +microbix, function () {
+    //Open 1wa url.
+    openBrowserAndWait();
+     //Click micorbix
+     cy.ClickMicrobix({})
+     
+  });
+
+
+  it('Validate that items in the Footer page populates ' +footerTestCase, function () {
+    //Open 1wa url.
+    openBrowserAndWait();
+     //Assert that the Footer Page
+     cy.AssertFooterPage({});
+  });
+
+
 
 
 });

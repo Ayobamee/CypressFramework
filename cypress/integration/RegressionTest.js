@@ -14,10 +14,13 @@ describe("Corporate Website Regression Test suite", function () {
   const ourNumbersTestCase = "C1024";
   const ourStoryTestCase = "C1025";
   const footerTestCase = "C1026";
-  const programpageTestCase = "C1032";
+  const viewMoreProgramTestCase = "C2218";
+  const learnMore = "C2252";
 
   
   
+
+
   function openBrowserAndWait() {
     cy.OpenUrl({});
     cy.wait(5000);
@@ -107,7 +110,7 @@ describe("Corporate Website Regression Test suite", function () {
    });
 
 
-  it('Validate that Programs page populates ' +programpageTestCase, function () {
+  it('Validate that Programs page populates ' +viewMoreProgramTestCase, function () {
    
     //Open 1wa url.
     openBrowserAndWait();
@@ -117,23 +120,20 @@ describe("Corporate Website Regression Test suite", function () {
 
 
   it('Validate that items in the Footer page populates ' +footerTestCase, function () {
-   
     //Open 1wa url.
     openBrowserAndWait();
      //Assert that the Footer Page
      cy.AssertFooterPage({});
-
   });
 
-
-
-
-
-
-
-
-
-
+  it('Validate that when user clicks the learn more button, learn more page items displays ' +learnMore, function () {
+    //Open 1wa url.
+    openBrowserAndWait();
+     //Click learn more
+     cy.ClickLearnMore({});
+     //Assert learn more page items.
+     cy.AssertLearnMorePageItems({})
+  });
 
 
 });

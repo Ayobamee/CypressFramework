@@ -147,6 +147,11 @@ getCopyright()
     return cy.get('.note > div')
 }
 
+getLearnMore()
+{
+    return cy.get('#button-learn')
+}
+
 }
 
 export default HomePage;

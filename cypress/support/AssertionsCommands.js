@@ -18,12 +18,14 @@ import ProgramPage from "../pageObjects/ProgramPage";
 import ProvidersPage from "../pageObjects/ProvidersPage";
 import SupportPage from "..//pageObjects/SupportPage";
 import CareerPage from "..//pageObjects/CareerPage";
+import LearnMorePage from "../pageObjects/LearnMore";
 
 const homePage = new HomePage();
 const progPage = new ProgramPage();
   const providerPage = new ProvidersPage();
   const supportPage = new SupportPage();
   const careerPage = new CareerPage();
+  const learnMorePage = new LearnMorePage();
 
 const baseUrl = "https://1wa.org/#/";
 
@@ -131,6 +133,21 @@ Cypress.Commands.add('AssertFooterPage', () => {
 Cypress.Commands.add('AssertVersion', () => {
   //Assert Version
   homePage.getVersion().should("be.visible")
+
+})
+
+Cypress.Commands.add('AssertLearnMorePageItems', () => {
+  //Assert overview.
+  learnMorePage.getOverview().should("be.visible")
+
+  //Assert molecular testing.
+  learnMorePage.getMolecularTesting().should("be.visible")
+
+  //Asset serology.
+  learnMorePage.getSerologyTesting().should("be.visible")
+
+  //Assert Resources.
+  learnMorePage.getResources().should("be.visible")
 
 })
 

@@ -17,6 +17,7 @@
 import './BaseUrlCommands'
 import './ProgramsCommands'
 import './AssertionsCommands'
+import './LearnMoreCommands'
 
 
 

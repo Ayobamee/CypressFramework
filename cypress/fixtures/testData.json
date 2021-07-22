@@ -1,51 +1,5 @@
 {
-  "baseURL": "https://app-staging.warenext.ng/login",
-  "apiBaseURL": "https://api-dev.warenext.ng/auth/login",
-  "truckerURL" : "https://api-dev.warenext.ng/admin/truckerjob",
-  "apiBase" : "https://api-dev.warenext.ng/logisticPartners",
-  "createShipmentBaseURL": "https://api-dev.warenext.ng/v1/truckerJob",
-
-  "stagingBaseURL" : "https://api-staging.warenext.ng",
-  "devBaseURL" : "https://api-dev.warenext.ng",
-  "authStaging": "/auth/login",
-  "shipmentPricing": "/getShipmentPricing",
-  "createShipment": "/v1/truckerJob",
-  "logisticsPartners" : "/logisticPartners",
-  "truckerJobs" : "/admin/truckerjob",
-  "uploadJob" : "/admin/upload/jobs",
-  "partnerLIst": "/warehouses?limit=1000",
-  "adminUsername": "demo@admin.com",
-  "adminPassword": "test1234",
-  "merchant2Username": "demo@merchant.com",
-  "merchantUsername":"merchant@test.com",
-  "merchantPassword":"test1234",
-  "vehicleMgrUsername": "vehiclemanager@warenext.com",
-  "vehicleMgrPassword":"test1234",
-  "bicyclemake": "BMX",
-  "bicycleModel" : 2020,
-  "salesAmount": "5000",
-  "paymentAmount": "6000",
-  "secondpaymentAmount": "2000",
-  "customerPhoneNo": "7060406260",
-  "customerName": "AutomatedTestUser",
-  "driverName": "AutomatedTestDrive",
-  "driverPhoneNo": "9021321234",
-  "driverEmail": "tester@test5.com",
-  "driverlicense": "XYZ621CA",
-  "PickUpAddress": "ikeja",
-  "Address": "No 24Test Address ",
-  "createdCustName": "Testered",
-  "createdCustPhoneNo": "09090919295",
-  "receiverPhoneNo" : "09020201122",
-  "productName": "TestProd",
-  "secondproductName": "AutoTestProduc",
-  "costPrice": "2000",
-  "quantityInstock": "1",
-  "productDescription": "AutomatedTesting",
-  "retailPrice": "3000",
-  "password": "Test12345!"
-
-
+  "baseURL": "*****"
 
 
 }

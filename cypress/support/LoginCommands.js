@@ -23,8 +23,6 @@ const td = new TestData;
 Cypress.Commands.add('Login', () => {
 
   //Enter username
-  // landingPage.getUsername().type(Cypress.env("username"))
-  // landingPage.getUsername().type(landingPage.getTypeUsername())
   landingPage.getUsername().type(td.Username())
 
   //Enter password

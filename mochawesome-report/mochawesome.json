@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2021-07-24T10:52:52.621Z",
-    "end": "2021-07-24T10:53:39.896Z",
-    "duration": 47275,
+    "start": "2021-07-24T14:30:13.580Z",
+    "end": "2021-07-24T14:31:00.600Z",
+    "duration": 47020,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "550eb615-ca47-4d63-8fd8-fe8867ac2744",
+      "uuid": "f36e3315-2de2-4519-9a37-bc0dfc37b815",
       "title": "",
       "fullFile": "cypress/integration/RegressionTest.js",
       "file": "cypress/integration/RegressionTest.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "97476c72-654f-4344-8b6b-2267223af389",
+          "uuid": "6bef4d1f-d2c8-4c21-8761-fc874e9a595e",
           "title": "Instagram Regression Test suite",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Validate that user with invalid details cannot login to the Instagram successfully",
               "fullTitle": "Instagram Regression Test suite Validate that user with invalid details cannot login to the Instagram successfully",
               "timedOut": null,
-              "duration": 42092,
+              "duration": 41776,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 30000ms: expected '<p#slfErrorAlert>' not to be 'visible'\n    at Context.eval (https://www.instagram.com/__cypress/tests?p=cypress/support/index.js:182:26)",
                 "diff": null
               },
-              "uuid": "765f9a97-46d1-47cd-ae61-46143b952f0b",
-              "parentUUID": "97476c72-654f-4344-8b6b-2267223af389",
+              "uuid": "213ac86a-4714-44a2-9689-a58f39695d07",
+              "parentUUID": "6bef4d1f-d2c8-4c21-8761-fc874e9a595e",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "765f9a97-46d1-47cd-ae61-46143b952f0b"
+            "213ac86a-4714-44a2-9689-a58f39695d07"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 42092,
+          "duration": 41776,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

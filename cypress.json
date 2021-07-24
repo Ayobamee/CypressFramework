@@ -1,20 +1,12 @@
 {
   "chromeWebSecurity": false,
-  "projectId": "pv5yoq",
-  "reporter": "cypress-testrail-reporter",
-  "reporterOptions": {
-    "host": "https://1wa.testrail.com",
-    "username": "aelutade@1wa.org",
-    "password": "dUF4uXL1Uy5CUBsnT/xj-jnp3an662MzcpsjOZGkz",
-    "runName": "CypressTestRailTest",
-    "projectId": 2,
-    "includeAllInTestRun": false,
-    "suiteId": 1,
-    "createTestRun": true,
-    "testCases":[1015,1016,1017,1018,1019,1020,1021,1022,1024,1025,1026,2218,2252,2253]
-  },
-
+  "projectId": "pcrtom",
+  "reporter": "mochawesome",
   "env": {
-    "prodUrl": "https://1wa.org/#/"
-  }
+    "testUrl": "https://www.instagram.com",
+    "username": "Quales@yahoo.com",
+    "password": "Quales123"
+  },
+  "defaultCommandTimeout": 30000,
+  "pageLoadTimeout": 50000
 }

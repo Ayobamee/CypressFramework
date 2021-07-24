@@ -12,19 +12,25 @@
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
 
-const baseUrl = "https://1wa.org/#/";
 
-import ProgramPage from "../pageObjects/ProgramPage";
-const Page = new ProgramPage();
-  Cypress.Commands.add('Programs', (user) => {
-    //Get programs from program page objects
-    Page.getPrograms().click()
-
-      
-  })
+import LandingPage from "../pageObjects/LandingPage";
+const landingPage = new LandingPage;
 
 
+Cypress.Commands.add('Login', () => {
 
+  //Enter username
+  // landingPage.getUsername().type(Cypress.env("username"))
+  landingPage.getUsername().type(landingPage.getTypeUsername())
+
+  //Enter password
+  landingPage.getPassword().type(Cypress.env("password"))
+
+
+  //Click login
+  landingPage.getLogin().click()
+
+})
 
 
 //

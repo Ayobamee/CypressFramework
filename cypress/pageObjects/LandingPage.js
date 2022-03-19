@@ -29,7 +29,7 @@ getError()
 
 getTypeUsername()
 {
-    var username = "test";
+    const username = "test";
     return username
 }
 

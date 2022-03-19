@@ -23,7 +23,7 @@ const landingPage = new LandingPage();
 Cypress.Commands.add('AssertLoginWrongDetails', () => {
 
   //Assert Error
-  landingPage.getError().should("not.be.visible");
+  landingPage.getError().should("be.visible");
 
 })
 

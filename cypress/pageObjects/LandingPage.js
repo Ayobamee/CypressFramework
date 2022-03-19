@@ -24,6 +24,7 @@ getLogin()
 getError()
 {
     return cy.get('[data-testid=login-error-message]')
+    
 }
 
 getTypeUsername()

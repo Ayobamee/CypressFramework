@@ -14,9 +14,9 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './BaseUrlCommands'
-import './AssertionsCommands'
-import './LoginCommands'
+import './LoadBaseUrl.actions'
+import './Assertions'
+import './Login.actions'
 
 
 

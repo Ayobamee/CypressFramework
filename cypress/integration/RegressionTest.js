@@ -1,11 +1,11 @@
 /// <reference types= "cypress" />
 
-describe("Instagram Regression Test suite", function () {
+describe("Instagram Regression Test suite",  () => {
   beforeEach(() => {
     cy.OpenUrl({});
   });
 
-  it("Validate that user with invalid details cannot login to the Instagram successfully", function () {
+  it("Validate that user with invalid details cannot login to the Instagram successfully",  () => {
   
     //Login
     cy.Login({});
@@ -13,11 +13,4 @@ describe("Instagram Regression Test suite", function () {
     cy.AssertLoginWrongDetails({});
   });
 
-  it("Validate that user with invalid details cannot login to the Instagram successfully", function () {
-  
-    //Login
-    cy.Login({});
-    //Assert login with wrong details.
-    cy.AssertLoginWrongDetails({});
-  });
 });

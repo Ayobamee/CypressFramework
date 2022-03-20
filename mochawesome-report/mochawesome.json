@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2021-07-24T14:30:13.580Z",
-    "end": "2021-07-24T14:31:00.600Z",
-    "duration": 47020,
+    "failures": 0,
+    "start": "2022-03-20T07:01:26.761Z",
+    "end": "2022-03-20T07:01:38.896Z",
+    "duration": 12135,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f36e3315-2de2-4519-9a37-bc0dfc37b815",
+      "uuid": "40852a8b-9b97-47ac-98a4-2e90d45455a8",
       "title": "",
       "fullFile": "cypress/integration/RegressionTest.js",
       "file": "cypress/integration/RegressionTest.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6bef4d1f-d2c8-4c21-8761-fc874e9a595e",
+          "uuid": "bf49fa5d-1c45-40cd-9a0e-ba7359d269b7",
           "title": "Instagram Regression Test suite",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "Validate that user with invalid details cannot login to the Instagram successfully",
               "fullTitle": "Instagram Regression Test suite Validate that user with invalid details cannot login to the Instagram successfully",
               "timedOut": null,
-              "duration": 41776,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 9351,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
-              "code": "//Open Instagram url\nopenBrowser(); //Login\ncy.Login({}); //Assert login with wrong details.\ncy.AssertLoginWrongDetails({});",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 30000ms: expected '<p#slfErrorAlert>' not to be 'visible'",
-                "estack": "AssertionError: Timed out retrying after 30000ms: expected '<p#slfErrorAlert>' not to be 'visible'\n    at Context.eval (https://www.instagram.com/__cypress/tests?p=cypress/support/index.js:182:26)",
-                "diff": null
-              },
-              "uuid": "213ac86a-4714-44a2-9689-a58f39695d07",
-              "parentUUID": "6bef4d1f-d2c8-4c21-8761-fc874e9a595e",
+              "code": "//Login\ncy.Login({}); //Assert login with wrong details.\ncy.AssertLoginWrongDetails({});",
+              "err": {},
+              "uuid": "9cc4a4ef-46ca-4a90-8354-38f9183b2a0e",
+              "parentUUID": "bf49fa5d-1c45-40cd-9a0e-ba7359d269b7",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "213ac86a-4714-44a2-9689-a58f39695d07"
+          "passes": [
+            "9cc4a4ef-46ca-4a90-8354-38f9183b2a0e"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 41776,
+          "duration": 9351,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

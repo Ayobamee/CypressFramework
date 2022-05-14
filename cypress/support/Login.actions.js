@@ -17,16 +17,16 @@ import LandingPage from "../pageObjects/LandingPage";
 import TestData from "../testData/TestData";
 
 const landingPage = new LandingPage;
-const td = new TestData;
+const credentials = new TestData;
 
 
 Cypress.Commands.add('Login', () => {
 
   //Enter username
-  landingPage.getUsername().type(td.Username())
+  landingPage.getUsername().type(credentials.Username())
 
   //Enter password
-  landingPage.getPassword().type(td.Password())
+  landingPage.getPassword().type(credentials.Password())
 
 
   //Click login

@@ -4,7 +4,8 @@
   "description": "End to End automated test for seamfix",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/cypress run",
+    "test": "npx cypress run",
+    "openRunner": "npx cypress open",
     "headTest": "npm test -- --headed",
     "chromeTest": "npm  test -- --browser chrome",
     "chromeHeadlessTest": "npm  test --headless --browser chrome",

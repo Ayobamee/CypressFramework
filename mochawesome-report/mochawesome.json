@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-03-20T07:01:26.761Z",
-    "end": "2022-03-20T07:01:38.896Z",
-    "duration": 12135,
+    "start": "2022-05-14T06:49:02.508Z",
+    "end": "2022-05-14T06:49:14.128Z",
+    "duration": 11620,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "40852a8b-9b97-47ac-98a4-2e90d45455a8",
+      "uuid": "a1aa975a-ff1c-4cb5-9ccc-4bf666ec0339",
       "title": "",
       "fullFile": "cypress/integration/RegressionTest.js",
       "file": "cypress/integration/RegressionTest.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bf49fa5d-1c45-40cd-9a0e-ba7359d269b7",
+          "uuid": "a18bdf2b-d281-49e4-b1e9-8f33f3583ffd",
           "title": "Instagram Regression Test suite",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Validate that user with invalid details cannot login to the Instagram successfully",
               "fullTitle": "Instagram Regression Test suite Validate that user with invalid details cannot login to the Instagram successfully",
               "timedOut": null,
-              "duration": 9351,
+              "duration": 8335,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//Login\ncy.Login({}); //Assert login with wrong details.\ncy.AssertLoginWrongDetails({});",
               "err": {},
-              "uuid": "9cc4a4ef-46ca-4a90-8354-38f9183b2a0e",
-              "parentUUID": "bf49fa5d-1c45-40cd-9a0e-ba7359d269b7",
+              "uuid": "caeda5b1-c607-41f8-817d-73a5c1ce365b",
+              "parentUUID": "a18bdf2b-d281-49e4-b1e9-8f33f3583ffd",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9cc4a4ef-46ca-4a90-8354-38f9183b2a0e"
+            "caeda5b1-c607-41f8-817d-73a5c1ce365b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 9351,
+          "duration": 8335,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
